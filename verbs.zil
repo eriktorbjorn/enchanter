@@ -274,8 +274,8 @@ game position, or end this session of the game?|
 	       (T
 		<QUIT>)>>
 
-<ROUTINE V-QUIT ("OPTIONAL" (ASK? T) "AUX" SCOR)
-	 #DECL ((ASK?) <OR ATOM <PRIMTYPE LIST>> (SCOR) FIX)
+<ROUTINE V-QUIT ("OPTIONAL" (ASK? T) "AUX")
+	 #DECL ((ASK?) <OR ATOM <PRIMTYPE LIST>>)
 	 <V-SCORE>
 	 <COND (<OR <AND .ASK?
 			 <TELL
@@ -622,8 +622,8 @@ manuscript. His wishes prevail, and it is agreed to send you back...." CR>
 <GLOBAL FUMBLE-NUMBER 7>
 <GLOBAL FUMBLE-PROB 8>
 
-<ROUTINE ITAKE ("OPTIONAL" (VB T) "AUX" CNT OBJ)
-	 #DECL ((VB) <OR ATOM FALSE> (CNT) FIX (OBJ) OBJECT)
+<ROUTINE ITAKE ("OPTIONAL" (VB T) "AUX" CNT)
+	 #DECL ((VB) <OR ATOM FALSE> (CNT) FIX)
 	 <COND (<NOT <FSET? ,PRSO ,TAKEBIT>>
 		<COND (.VB
 		       <TELL <PICK-ONE ,YUKS> CR>)>
@@ -894,9 +894,7 @@ Copyright (c) 1983 Infocom, Inc. All rights reserved.|">
 		      "!" CR>)>
 	 <RFATAL>>
 
-<ROUTINE V-BOARD
-	 ("AUX" AV)
-	 #DECL ((AV) OBJECT)
+<ROUTINE V-BOARD ()
 	 <TELL "You are now in the " D ,PRSO "." CR>
 	 <MOVE ,WINNER ,PRSO>
 	 <APPLY <GETP ,PRSO ,P?ACTION> ,M-ENTER>
@@ -1305,7 +1303,7 @@ slivers which evaporate instantaneously."
 
 \
 
-<ROUTINE V-SHAKE ("AUX" X)
+<ROUTINE V-SHAKE ()
 	 <COND (<FSET? ,PRSO ,VILLAIN>
 		<TELL "Be real." CR>)
 	       (<NOT <FSET? ,PRSO ,TAKEBIT>>
@@ -1512,7 +1510,7 @@ collapse." CR>)>>
 <ROUTINE V-SPIN ()
 	 <TELL "You can't spin that!" CR>>
 
-<ROUTINE V-THROUGH ("AUX" M)
+<ROUTINE V-THROUGH ()
 	<COND (<FSET? ,PRSO ,DOORBIT>
 	       <DO-WALK <OTHER-SIDE ,PRSO>>
 	       <RTRUE>)

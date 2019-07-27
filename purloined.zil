@@ -914,8 +914,8 @@ through." CR>)>
 by his discovery">)>
 		<TELL "." CR>)>>
 
-<ROUTINE DIR-FROM (HERE THERE "AUX" P L TX O)
-	 #DECL ((HERE THERE O) OBJECT (P L) FIX)
+<ROUTINE DIR-FROM (HERE THERE "AUX" P L TX)
+	 #DECL ((HERE THERE) OBJECT (P L) FIX)
 	 <SET P 0>
 	 <REPEAT ()
 		 <COND (<0? <SET P <NEXTP .HERE .P>>>

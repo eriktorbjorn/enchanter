@@ -361,7 +361,7 @@
 		QUENCH-SPELL
 		CREDITS-SPELL>>
 
-<ROUTINE V-SPELLS ("AUX" (CNT <GET ,ALL-SPELLS 0>) S (ANY <>) (OS <>) TMP)
+<ROUTINE V-SPELLS ("AUX" (CNT <GET ,ALL-SPELLS 0>) (ANY <>) (OS <>) TMP)
 	 <TELL
 "The gnusto spell, the only thing you seem to have learned well after many
 years at the University, remains yours forever. Other than that, you have
@@ -985,7 +985,7 @@ internal strength." CR>)
 
 <GLOBAL STRONG-BOX-FLAG <>>
 
-<ROUTINE V-BLORB ("AUX" OBJ) ;"strong-box"
+<ROUTINE V-BLORB () ;"strong-box"
 	 <COND (,STRONG-BOX-FLAG
 		<V-VAXUM>
 		<RTRUE>)>
