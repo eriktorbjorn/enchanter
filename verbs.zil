@@ -1363,7 +1363,7 @@ slivers which evaporate instantaneously."
 
 <ROUTINE V-ZORK ()
 	 <TELL
-"ZORK (R) - A trilogy of fantasy classics from INFOCOM. " CR>>
+"ZORK (R) - A trilogy of fantasy classics from INFOCOM." CR>>
 
 \
 
